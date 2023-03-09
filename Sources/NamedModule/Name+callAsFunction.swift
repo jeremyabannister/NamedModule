@@ -11,13 +11,13 @@ extension Name {
     ///
     public func callAsFunction
         <Value>
-        (generatedNamedValue: ()->Value)
+        (generateValue: ()->Value)
     -> Named<Value> {
         
         ///
         Named<Value>(
             name: self,
-            value: generatedNamedValue()
+            value: generateValue()
         )
     }
 }
